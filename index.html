@@ -10,7 +10,6 @@
             <h1>Lämpötila Muunnin</h1>
         </div>
         <div class="box2">
-            <form action="/action_page.php">
                 <select id="temperature" name="temperature">
                   <option value="CF">Celsius->Fahrenheit</option>
                   <option value="FC">Fahrenheit->Celsius</option>
@@ -19,27 +18,27 @@
                   <option value="KC">Kelvin->Celsius</option>
                   <option value="CK">Celsius->Kelvin</option>
                 </select>
-              </form>
               <div class=box-3>
                   <p>Syötä lämpötila:</p>
               </div>
               <div class=box4>
-                <input type="text">
-                <input type="button" value='Muunna' id="button">
+                <input type="number" id="lmp">
+                <button onclick="laskelämpötila")>Muunna</button>
+                
               </div>
               <div class="box5">
-                <form>
-                    <input type="radio" id="1 desimaali" name="desimaali" value="1 desimaali">
+                    <input type="radio" id="1-desimaali" name="desimaali" value="1" checked>
                     <label for="1 desimaali">1 desimaali</label><br>
 
-                    <input type="radio" id="2 desimaali" name="desimaali" value="2 desimaali">
+                    <input type="radio" id="2-desimaali" name="desimaali" value="2">
                     <label for="2 desimaali">2 desimaali</label><br>
 
-                    <input type="radio" id="3 desimaali" name="desimaali" value="3 desimaali">
+                    <input type="radio" id="3-desimaali" name="desimaali" value="3">
                     <label for="3 desimaali">3 desimaali</label>
 
-                  </form> 
-
+              </div>
+              <div>
+                <p>Vastaus <span id="tulos"></span></p>
               </div>
         </div>
     </div>
