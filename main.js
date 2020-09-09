@@ -1,4 +1,4 @@
-function laskelämpötila() {
+function laskelampotila() {
 
     var valitseMuunnos = document.getElementById("temperature").value;
     var lämpötila = document.getElementById("lmp").value;
