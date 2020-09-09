@@ -1,21 +1,38 @@
 function laskelämpötila() {
+
     var valitseMuunnos = document.getElementById("temperature").value;
     var lämpötila = document.getElementById("lmp").value;
     var vastaus;
 
     if (valitseMuunnos == "CF") {
-            f = cToF(lämpötila);
-        document.getElementById("vastaus").innerHTML`${lämpötila} celsius on ${f}`; 
+            f = pyöristys(cToF(lämpötila))          
+        document.getElementById("vastaus").innerHTML = `${lämpötila} fahrenheit on ${f}`; 
     }
 
     if (valitseMuunnos == "FC") {
-        c = fToC(numberTemp);
-    document.getElementById("vastaus").innerHTML`${lämpötila} fahrenheit on ${c}`; 
-}
+        c = pyöristys(fToC(lämpötila))
+          document.getElementById("vastaus").innerHTML = `${lämpötila} celsius on ${c}`; 
+    }
+
     if (valitseMuunnos == "FK") {
-    f = fToK(numberTemp);
-    document.getElementById("vastaus").innerHTML`${lämpötila} celsius on ${f}`; 
-     }
+        k = pyöristys(fToK(lämpötila))
+          document.getElementById("vastaus").innerHTML = `${lämpötila} kelvin on ${k}`; 
+    }
+
+    if (valitseMuunnos == "KF") {
+        f = pyöristys(kToF(lämpötila))
+          document.getElementById("vastaus").innerHTML = `${lämpötila} fahrenheit on ${f}`; 
+    }
+   
+    if (valitseMuunnos == "KC") {
+        c = pyöristys(kToC(lämpötila))
+          document.getElementById("vastaus").innerHTML = `${lämpötila} celsius on ${c}`; 
+    }
+
+    if (valitseMuunnos == "CK") {
+        k = pyöristys(cToK(lämpötila))
+          document.getElementById("vastaus").innerHTML = `${lämpötila} kelvin on ${k}`; 
+    }
 }
    
   
